@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+    <parameter name="url" value="https://www.ebay.com/"/>
+    <test verbose="2" preserve-order="true" name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="category" value="Cell Phones &amp; Accessories"/>
+        <parameter name="searchItem" value="Mobile Phone"/>
+        <parameter name="quantity" value="1"/>
+        <classes>
+            <class name="TestEbayPurchase"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="category" value="Cell Phones &amp; Accessories"/>
+        <parameter name="searchItem" value="Mobile Phone"/>
+        <parameter name="quantity" value="1"/>
+        <classes>
+            <class name="TestEbayPurchase"/>
+        </classes>
+    </test>
+</suite>
